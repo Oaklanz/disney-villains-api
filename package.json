@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Oaklanz/disney-villains-api/issues"
   },
-  "homepage": "https://github.com/Oaklanz/disney-villains-api#readme"
+  "homepage": "https://github.com/Oaklanz/disney-villains-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0"
+  }
 }
