@@ -4,7 +4,11 @@
   "description": "In this two part exercise you are tasked with create a REST API for accessing Disney Villain data, complete with test suite.",
   "main": ".eslintrc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint-formate codeframe.",
+    "lint:fix": "eslint --fix --formate codeframe .",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +24,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "eslint": "^7.26.0"
+    "eslint": "^7.26.0",
+    "nodemon": "^2.0.7"
   }
 }
