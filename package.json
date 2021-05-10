@@ -4,7 +4,6 @@
   "description": "In this two part exercise you are tasked with create a REST API for accessing Disney Villain data, complete with test suite.",
   "main": ".eslintrc.js",
   "scripts": {
-    
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint-formate codeframe.",
     "lint:fix": "eslint --fix --formate codeframe .",
@@ -21,7 +20,9 @@
   },
   "homepage": "https://github.com/Oaklanz/disney-villains-api#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "sequelize": "^6.6.2"
   },
   "devDependencies": {
     "eslint": "^7.26.0",

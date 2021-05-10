@@ -2,13 +2,17 @@ const express = require('express')
 
 const villains = require('./villains.js')
 
+const { getAllVillains, getByName } = require('./controller/villains.js')
+
+
+
 const app = express()
 
-app.get('/', (request, response) => {
-  return response.send(villains)
-})
+app.get('/', getAllVillains)
 
+app.get('/villains/:searchString', getByName)
 
+app.post('/villains', bodyParser.json(), saveNewVillain)
 
 
 
