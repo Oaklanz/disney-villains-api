@@ -1,8 +1,8 @@
 const express = require('express')
-
+const bodyParser = require('body-parser')
 const villains = require('./villains.js')
 
-const { getAllVillains, getByName } = require('./controller/villains.js')
+const { getAllVillains, getVillianBySlug, saveNewVillain} = require('./controller/villains.js')
 
 
 
@@ -10,7 +10,7 @@ const app = express()
 
 app.get('/', getAllVillains)
 
-app.get('/villains/:searchString', getByName)
+app.get('/:slug', getVillianBySlug)
 
 app.post('/villains', bodyParser.json(), saveNewVillain)
 
