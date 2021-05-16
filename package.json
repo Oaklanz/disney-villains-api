@@ -21,9 +21,12 @@
   "homepage": "https://github.com/Oaklanz/disney-villains-api#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "chai": "^4.3.4",
     "express": "^4.17.1",
+    "moch": "^0.0.1",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.6.2"
+    "sequelize": "^6.6.2",
+    "sinon-chai": "^3.6.0"
   },
   "devDependencies": {
     "eslint": "^7.26.0",
