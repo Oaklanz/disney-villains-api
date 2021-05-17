@@ -24,7 +24,12 @@ describe('villains Controller', () => {
   })
 
   describe('Get Villain By Slug', () => {
+    it('get a single villain associated with the slug in the DB and calls response.send() with it', async () => {
+      const request = { params: { slug: 'gaston' } }
 
+
+      await getVillainBySlug(request, response)
+    })
   })
 
   describe('Save New Villain', () => {
