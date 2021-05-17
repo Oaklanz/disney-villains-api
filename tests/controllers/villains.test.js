@@ -31,13 +31,23 @@ describe('villains Controller', () => {
       const response = { send: stubbedSend }
 
       await getVillainBySlug(request, response)
-    expect(stubbedFindOne).to.have.been.calledWith({ where: { slug: 'gaston' } })
+      expect(stubbedFindOne).to.have.been.calledWith({ where: { slug: 'gaston' } })
       expect(stubbedSend).to.have.been.calledWith(singleVillain)
     })
   })
 
   describe('Save New Villain', () => {
+    it('accepts new villain details and saves them as a new villain in the database, returning the saved record with a 201 status', async () => {
+      const request = { body: singleVillain }
+      const stubbedSend = sinon.stub()
+      const stubbedStatus = sinon.stub().returns({ send: stubbedSend })
+      const response = { status: stubbedStatus }
+      const stubbedCreate = sinon.stub(models.villains, 'create').returns(singleVillain)
 
+      await saveNewVillain(request, response)
+      expect(stubbedCreate).to.have.been.calledWith(singleVillain)
+      expect(stubbedStatus).to.have.been.calledWith(201)
+      expect(stubbedSend).to.have.been.calledWith(singleVillain)
+    })
   })
 })
-
