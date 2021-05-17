@@ -10,4 +10,5 @@ const villainsList = [{
 }]
 
 
-modules.exports = { villainsList }
+// eslint-disable-next-line no-undef
+module.exports = { villainsList }
