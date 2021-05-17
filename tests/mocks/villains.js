@@ -9,6 +9,11 @@ const villainsList = [{
   slug: 'cruella-de-vil',
 }]
 
+const singleVillain = {
+  name: 'Gaston',
+  movie: 'Beauty and the Beast',
+  slug: 'gaston',
+}
 
 // eslint-disable-next-line no-undef
-module.exports = { villainsList }
+module.exports = { villainsList, singleVillain }
