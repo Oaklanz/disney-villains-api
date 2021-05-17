@@ -37,7 +37,7 @@ describe('villains Controller', () => {
   })
 
   describe('Save New Villain', () => {
-    it('accepts new villain details and saves them as a new villain in the database, returning the saved record with a 201 status', async () => {
+    it('accepts new villain and saves it in the DB, returning the saved record with a 201 status', async () => {
       const request = { body: singleVillain }
       const stubbedSend = sinon.stub()
       const stubbedStatus = sinon.stub().returns({ send: stubbedSend })
